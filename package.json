@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ELEVENTY_ROOT=src npx @11ty/eleventy --serve",
+    "build": "ELEVENTY_ROOT=src npx @11ty/eleventy",
+    "clean": "rm -rf _site",
+    "dev": "ELEVENTY_ROOT=src npx @11ty/eleventy --serve --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "gray-matter": "^4.0.3"
+    "@11ty/eleventy": "^2.0.1",
+    "gray-matter": "^4.0.3",
+    "js-beautify": "^1.15.4",
+    "js-yaml": "^4.1.0",
+    "liquidjs": "^10.9.2"
   },
   "devDependencies": {
     "pretty": "^2.0.0"

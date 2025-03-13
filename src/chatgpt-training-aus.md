@@ -1,5 +1,5 @@
 ---
-template: base.njk
+layout: base.njk
 title: ChatGPT Training mit Daten deaktivieren
 icon: "&#128270;"
 background: 2

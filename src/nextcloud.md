@@ -1,5 +1,5 @@
 ---
-template: base.njk
+layout: base.njk
 background: 4
 title: Das Relationship Cloud Sync Clients / Apps
 icon: "&#9729;"

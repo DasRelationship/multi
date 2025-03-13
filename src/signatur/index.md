@@ -1,5 +1,5 @@
 ---
-template: base.njk
+layout: base.njk
 title: Signatur
 icon: "&#128395;"
 background: 1

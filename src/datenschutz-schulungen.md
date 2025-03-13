@@ -1,6 +1,6 @@
 ---
+layout: base.njk
 icon: "&#128274;"
-template: base.njk
 title: Datenschutz-Schulungen
 heading: Das Relationship Datenschutz-Schulungen
 background: 3
