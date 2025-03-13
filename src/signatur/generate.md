@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-heading: Update
+title: Update
 icon: "&#128270;"
 ---
 
