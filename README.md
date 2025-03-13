@@ -1,64 +1,73 @@
-# Das Relationship Multi Site
+# Das Relationship Multi-Site  
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/75450437-ea88-4f97-94c5-e726c798cc60/deploy-status)](https://app.netlify.com/sites/dasrelationship-multi/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/75450437-ea88-4f97-94c5-e726c798cc60/deploy-status)](https://app.netlify.com/sites/dasrelationship-multi/deploys)  
+Eine vielseitige Website, erstellt mit 11ty für Das Relationship, mit Funktionen wie Signaturgenerierung, Dokumentation und Social-Media-Integration.  
 
-A multi site built with 11ty for Das Relationship.
+## Voraussetzungen  
 
-## Prerequisites
+- Node.js (empfohlen: Version 18 oder höher)  
+- npm  
 
-- Node.js (v18 or higher recommended)
-- npm
-
-## Installation
+## Installation  
 
 ```bash
 npm install
 ```
 
-## Development
+## Entwicklung  
 
-To start the development server:
-
-```bash
-npx @11ty/eleventy --serve
-```
-
-This will start a local server at `http://localhost:8080`
-
-## Build
-
-To build the site for production:
+Um den Entwicklungsserver zu starten:  
 
 ```bash
-npx @11ty/eleventy
+npm run dev
 ```
 
-The built site will be in the `_site` directory.
+Dadurch wird ein lokaler Server unter `http://localhost:8080` gestartet.  
 
-## Project Structure
+## Build  
+
+Um die Website für die Produktion zu erstellen:  
+
+```bash
+npm run build
+```
+
+Die erstellte Website befindet sich im Verzeichnis `_site`.  
+
+## Projektstruktur  
 
 ```
 src/
-├── _data/          # Global data files
-├── _includes/      # Reusable components
-├── _layouts/       # Layout templates
-└── */              # Content pages
+├── _data/          # Globale Daten-Dateien (podcast.json, social.json)
+├── _includes/      # Wiederverwendbare Komponenten und Partials
+├── _layouts/       # Layout-Vorlagen (base.njk)
+└── */              # Inhaltsseiten in Markdown
+    └── signatur/   # Seiten für den Signatur-Generator
 ```
 
-## Features
+## Funktionen  
 
-- Responsive design
-- Social media integration
-- Podcast links
-- Custom signatures generator
-- Documentation pages
+- Responsives Design mit Potion CSS  
+- Social-Media-Integration  
+- Podcast-Link-Integration  
+- Individueller Signatur-Generator  
+- Dokumentationsseiten  
+- HTML-Formatierung  
+- Asset-Passthrough für CSS und JS  
 
-## Deployment
+## Konfiguration  
 
-The site is deployed using Netlify with the following configuration:
-- Build command: `npx @11ty/eleventy`
-- Publish directory: `_site`
+- Template-Engine: Nunjucks  
+- Markdown-Dateien verwenden `layout: base.njk` im Frontmatter  
+- Globale Daten sind über die Variablen `podcast` und `social` verfügbar  
+- Debug-Collection für die Entwicklung verfügbar  
 
-## License
+## Deployment  
 
-ISC
+Die Website wird mit Netlify bereitgestellt und verwendet folgende Konfiguration:  
+- Build-Befehl: `npm run build`  
+- Veröffentlichungsverzeichnis: `_site`  
+
+## Lizenz
+
+Dieses Projekt steht unter der [GNU Affero General Public License v3 (AGPL-3.0)](LICENSE).
