@@ -1,0 +1,16 @@
+{% if showPodcast %}
+<div class="social-icons">
+    {% if podcast.amazon %}
+    <a href="{{ podcast.amazon }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-amazon fa-xl"></i></a>
+    {% endif %}
+    {% if podcast.spotify %}
+    <a href="{{ podcast.spotify }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-spotify fa-xl"></i></a>
+    {% endif %}
+    {% if podcast.apple %}
+    <a href="{{ podcast.apple }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-podcast fa-xl"></i></a>
+    {% endif %}
+    {% if podcast.youtube %}
+    <a href="{{ podcast.youtube }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube fa-xl"></i></a>
+    {% endif %}
+</div>
+{% endif %}

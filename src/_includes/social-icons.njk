@@ -1,0 +1,22 @@
+{% if showSocial %}
+<div class="social-icons">
+    {% if social.instagram %}
+    <a href="{{ social.instagram }}"><i class="fa-brands fa-instagram fa-xl"></i></a>
+    {% endif %}
+    {% if social.youtube %}
+    <a href="{{ social.youtube }}"><i class="fa-brands fa-youtube fa-xl"></i></a>
+    {% endif %}
+    {% if social.facebook %}
+    <a href="{{ social.facebook }}"><i class="fa-brands fa-facebook fa-xl"></i></a>
+    {% endif %}
+    {% if social.tiktok %}
+    <a href="{{ social.tiktok }}"><i class="fa-brands fa-tiktok fa-xl"></i></a>
+    {% endif %}
+    {% if social.linkedin %}
+    <a href="{{ social.linkedin }}"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+    {% endif %}
+    {% if social.email %}
+    <a href="mailto:{{ social.email }}"><i class="fa-solid fa-envelope fa-xl"></i></a>
+    {% endif %}
+</div>
+{% endif %}

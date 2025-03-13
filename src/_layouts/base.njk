@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/miloxeon/potion/potion.min.css">
+        <title>{% if page.fileSlug === "" %}Das Relationship{% else %}{{ title }} – Das Relationship{% endif %}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        {%include "social-styles.njk" %}
+        <style>
+            .background {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 200px;
+                position: relative;
+            }
+            
+            footer {
+                padding-top: 15px;
+            }
+        </style>
+        {% if customCSS %}
+            {% include "custom-styles.njk" %}      
+        {% endif %}
+        {% if headScript %}
+        <script>
+            {{ headScript | safe }}
+        </script>
+        {% endif %}
+    </head>
+    <body>
+        <header>
+            {% if background%}<div class="background" style="background-image: url('https://static.dasrelationship.com/bg/background{{ background }}.jpg');"></div>{% endif %}
+            {% if icon%}<div class="icon">{{ icon | safe }}</div>{% endif %}
+            {% if not noHeading %}<h1>{{ heading | default(title) }}</h1>{% endif %}
+        </header>
+
+        <main>
+            {% include "social-icons.njk" %}
+            {% include "podcast-links.njk" %}
+            {{ content | safe }}
+        </main>
+
+        <footer id="datenschutzUndImpressum">
+            <p>
+                <a href="https://dasrelationship.com/impressum/">Impressum</a> | 
+                <a href="https://dasrelationship.com/datenschutzerklaerung/">Datenschutzerklärung</a>
+            </p>
+        </footer>
+
+        {% if bodyScript %}
+        <script>
+            {{ bodyScript | safe }}
+        </script>
+        {% endif %}
+    </body>
+</html>
