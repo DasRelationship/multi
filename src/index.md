@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+template: base.njk
 heading: Das Relationship
 icon: "&#128741;"
 background: 1

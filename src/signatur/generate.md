@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+template: base.njk
 heading: Update
 icon: "&#128270;"
 ---
