@@ -2,11 +2,21 @@ const pretty = require("pretty");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addGlobalData("podcast", () => {
-        return require("./src/_data/podcast.json");
+        try {
+            return require("./src/_data/podcast.json");
+        } catch (e) {
+            console.warn("Could not load podcast data");
+            return {};
+        }
     });
 
     eleventyConfig.addGlobalData("social", () => {
-        return require("./src/_data/social.json");
+        try {
+            return require("./src/_data/social.json");
+        } catch (e) {
+            console.warn("Could not load social data");
+            return {};
+        }
     });
 
     eleventyConfig.addCollection("debug", function(collectionApi) {
@@ -41,10 +51,12 @@ module.exports = function(eleventyConfig) {
         dir: {
             input: "src",
             includes: "_includes",
+            layouts: "_layouts", 
             data: "_data",
             output: "_site"
         },
         htmlTemplateEngine: "njk",
-        markdownTemplateEngine: "njk"
+        markdownTemplateEngine: "njk",
+        pathPrefix: "/" // Ensure proper path handling
     };
 };
