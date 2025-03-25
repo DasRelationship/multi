@@ -1,7 +1,7 @@
 # Das Relationship Multi-Site  
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/75450437-ea88-4f97-94c5-e726c798cc60/deploy-status)](https://app.netlify.com/sites/dasrelationship-multi/deploys)  
-Eine vielseitige Website, erstellt mit 11ty für Das Relationship, mit Funktionen wie Signaturgenerierung, Dokumentation und Social-Media-Integration.  
+Eine Website, erstellt mit 11ty für Das Relationship, mit Funktionen wie Signaturgenerierung, Dokumentation und Social-Media-Integration.  
 
 ## Voraussetzungen  
 
@@ -43,6 +43,7 @@ src/
 ├── _layouts/       # Layout-Vorlagen (base.njk)
 └── */              # Inhaltsseiten in Markdown
     └── signatur/   # Seiten für den Signatur-Generator
+    └── nextcloud/  # Seiten für  Nextcloud
 ```
 
 ## Funktionen  
