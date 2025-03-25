@@ -17,7 +17,8 @@
     "gray-matter": "^4.0.3",
     "js-beautify": "^1.15.4",
     "js-yaml": "^4.1.0",
-    "liquidjs": "^10.9.2"
+    "liquidjs": "^10.9.2",
+    "please-upgrade-node": "^3.2.0"
   },
   "devDependencies": {
     "pretty": "^2.0.0"
