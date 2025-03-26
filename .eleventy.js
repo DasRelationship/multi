@@ -1,6 +1,46 @@
-const pretty = require("pretty");
+import pretty from "pretty";
+import fs from 'fs/promises';
+import * as fsSync from 'fs';
+import EleventyPluginOgImage from 'eleventy-plugin-og-image';
+import { decode } from 'html-entities';
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
+    eleventyConfig.addPlugin(EleventyPluginOgImage, {
+        satoriOptions: {
+            fonts: [
+                {
+                    name: 'Inter',
+                    data: fsSync.readFileSync('./src/assets/fonts/Inter-Regular.ttf'),
+                    weight: 400,
+                    style: 'normal',
+                },
+                {
+                    name: 'Inter',
+                    data: fsSync.readFileSync('./src/assets/fonts/Inter-Medium.ttf'),
+                    weight: 500,
+                    style: 'normal',
+                },
+                {
+                    name: 'Inter',
+                    data: fsSync.readFileSync('./src/assets/fonts/Inter-SemiBold.ttf'),
+                    weight: 600,
+                    style: 'normal',
+                },
+                {
+                    name: 'Inter',
+                    data: fsSync.readFileSync('./src/assets/fonts/Inter-Bold.ttf'),
+                    weight: 700,
+                    style: 'normal',
+                }
+            ],
+        },
+        outputDir: '/og-images/',
+        formats: ['png'],
+        width: 1200,
+        height: 630,
+        cacheDirectory: '.cache/og-images/'
+    });
+
     // Add debug logging for template processing
     eleventyConfig.on('beforeBuild', () => {
         console.log('Debug: Starting build process');
@@ -14,18 +54,20 @@ module.exports = function(eleventyConfig) {
         return content;
     });
 
-    eleventyConfig.addGlobalData("podcast", () => {
+    eleventyConfig.addGlobalData("podcast", async () => {
         try {
-            return require("./src/_data/podcast.json");
+            const data = await fs.readFile('./src/_data/podcast.json', 'utf8');
+            return JSON.parse(data);
         } catch (e) {
             console.warn("Could not load podcast data");
             return {};
         }
     });
 
-    eleventyConfig.addGlobalData("social", () => {
+    eleventyConfig.addGlobalData("social", async () => {
         try {
-            return require("./src/_data/social.json");
+            const data = await fs.readFile('./src/_data/social.json', 'utf8');
+            return JSON.parse(data);
         } catch (e) {
             console.warn("Could not load social data");
             return {};

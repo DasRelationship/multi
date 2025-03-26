@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:type" content="website" />
+        {% ogImage "./og-image.og.njk", title=title, background=background %}
+        <meta property="og:url" content="https://multi.dasrelationship.com{{ page.url }}" />
+        <meta property="og:locale" content="de_DE" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/miloxeon/potion/potion.min.css">
         <title>{% if page.fileSlug === "" %}Das Relationship{% else %}{{ title }} – Das Relationship{% endif %}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

@@ -1,6 +1,7 @@
 {
   "name": "drs-11ty",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "ELEVENTY_ROOT=src npx @11ty/eleventy --serve",
@@ -14,7 +15,9 @@
   "description": "",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "eleventy-plugin-og-image": "^4.0.1",
     "gray-matter": "^4.0.3",
+    "html-entities": "^2.5.3",
     "js-beautify": "^1.15.4",
     "js-yaml": "^4.1.0",
     "liquidjs": "^10.9.2",
@@ -22,6 +25,7 @@
     "please-upgrade-node": "^3.2.0"
   },
   "devDependencies": {
+    "eleventy-plugin-og-image": "^4.0.1",
     "pretty": "^2.0.0"
   }
 }
