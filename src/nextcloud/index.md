@@ -3,6 +3,7 @@ layout: base.njk
 background: 4
 title: Das Relationship Cloud Sync Clients / Apps
 icon: "&#9729;"
+description: "Hier findest du die Downloads für die Nextcloud-App für Android, iOS, Windows, macOS und Linux."
 ---
 
 <p><a href="https://play.google.com/store/apps/details?id=com.nextcloud.client">Nextcloud im Google Play Store</a></p>

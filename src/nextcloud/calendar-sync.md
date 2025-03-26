@@ -3,6 +3,7 @@ layout: base.njk
 background: 4
 title: Das Relationship Calendar Sync
 icon: "&#9729;"
+description: "Hier findest du die Anleitung, wie du den Kalender-Sync auf deinem Smartphone oder Tablet einrichten kannst."
 ---
 <details class="mt-3">
     <summary>Android</summary>

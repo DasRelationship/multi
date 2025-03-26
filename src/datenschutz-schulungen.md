@@ -4,6 +4,7 @@ icon: "&#128274;"
 title: Datenschutz-Schulungen
 heading: Das Relationship Datenschutz-Schulungen
 background: 3
+description: "Hier findest du die Schulungen zum Thema Datenschutz."
 ---
 <ol>
     <li><a href="https://go.dasrelationship.com/DMS-Schulung" class="link">Schulung - Überblick zum Datenschutz <i>Dokument, Lesedauer etwa 7 Minuten</i></a></li>

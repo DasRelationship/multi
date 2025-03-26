@@ -8,6 +8,8 @@
         {% ogImage "./og-image.og.njk", title=title, background=background %}
         <meta property="og:url" content="https://multi.dasrelationship.com{{ page.url }}" />
         <meta property="og:locale" content="de_DE" />
+        <meta property="og:logo" content="https://static.dasrelationship.com/DRS-logo-fullColor-rgb@1200px.png" />
+        <meta property="og:description" content="{{ description | default('Das Relationship – Beziehungen, Liebe und Sexualität') }}" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/miloxeon/potion/potion.min.css">
         <title>{% if page.fileSlug === "" %}Das Relationship{% else %}{{ title }} – Das Relationship{% endif %}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

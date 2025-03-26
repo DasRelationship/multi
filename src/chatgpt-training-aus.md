@@ -3,6 +3,7 @@ layout: base.njk
 title: ChatGPT Training mit Daten deaktivieren
 icon: "&#128270;"
 background: 2
+description: "Hier findest du die Anleitung, wie du ChatGPT Training mit Daten deaktivieren kannst."
 ---
 <ol>
     <li>Gehe auf <a href="https://chatgpt.com" target="_blank">chatgpt.com</a></li>
