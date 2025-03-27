@@ -16,7 +16,7 @@ description: "Hier findest du die Anleitung, wie du den Kalender-Sync auf deinem
             <li>DAVx⁵ wird geöffnet und du wirst aufgefordert, ein Konto zu erstellen. Leg den Kontonamen auf einen Namen deiner Wahl fest und stell die <b>Kontaktgruppenmethode</b> auf <b>Gruppen sind Kategorien der Kontakte</b>.</li>
             <li>Danach wird DAVx⁵ geschlossen und die Nextcloud-App wird erneut angezeigt. Um das Setup abzuschließen, muss DAVx⁵ erneut manuell gestartet werden.</li>
             <li>Tippe auf das Symbol für das Konto, das DAVx⁵ gerade erstellt hat, und gewähre DAVx⁵ in der Aufforderung Zugriff auf deine Kalender und Kontakte.</li>
-            <li>Wenn dz auf das Symbol für das Konto tippst, das DAVx⁵ eingerichtet hat, werden die verfügbaren Adressbücher und Kalender erkannt. Wähle, welche du synchronisieren möchtest und schließe den Vorgang ab.</li>
+            <li>Wenn du auf das Symbol für das Konto tippst, das DAVx⁵ eingerichtet hat, werden die verfügbaren Adressbücher und Kalender erkannt. Wähle, welche du synchronisieren möchtest und schließe den Vorgang ab.</li>
         </ol>
     </section>
 </details>
